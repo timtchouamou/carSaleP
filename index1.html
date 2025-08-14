@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>Cars1</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <section id="landing">
+       <nav>
+        <div class="nav__container">
+          <div class="nav__block-logo--title">
+            <img
+            class="nav__logo"
+            src="https://tse1.mm.bing.net/th/id/OIP.5bznDATpUrtB4Dt6Uo77yQHaFj?pid=Api&P=0&h=180"
+            alt="logo"
+            />
+            <div class="nav__logo--title">Timsand</div>
+          </div>
+            
+            <ul class="nav__links">
+              <li><a href="index1.html" class="nav__link">Home</a></li>
+              <li><a href="index2.html" class="nav__link">Find your car</a></li>
+              <li><a class="nav__link nav__link--primary btn-contact">Contact</a></li>
+            </ul>
+            <!-- BUTTOM ADD TO ADD MODAL -->
+            <button class="btn__menu" onclick="openMenu()">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <!-- END BUTTOM ADD TO ADD MODAL -->
+            
+            <!-- MODAL SECTION -->
+                <div class="menu__backdrop">
+                  <button class="btn__menu btn__menu--close" id="search-button" onclick="closeMenu()">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                  </button>
+                  <ul class="menu__links">
+                    <li class="menu__list"><a href="index1.html" class="menu__link">Home</a></li>
+                    <li class="menu__list"><a href="index2.html" class="menu__link">Find your car</a></li>
+                    <li class="menu__list"><a href="" class="modal__link menu__link--primary btn-contact">Contact</a></li>
+                  </lu>
+              </div>
+              <!-- END MODAL SECTION -->
+          </div>
+      </nav>
+
+<header>
+  <div class="date-display">
+        <div class="day" id="currentDay">Today</div>
+        <div class="full-date" id="currentDate">01/01/2025</div>
+      </div>
+    <div class="header__container">
+            <div class="header__description">
+                <h1>American's most awarded car subscription platform</h1>
+                 <h2>Find your dream car with<span class="purple" > TIMSAND</span></h2> 
+                 <div class=" input__button">
+                   <input type="text"
+                   class="header__search--input"
+                   id="searchTerm"
+                   placeholder="Search by Model, Make or Keyword"/>
+                   <button class="header__search--btn" onclick="searchOMDb()">
+                     Get Started
+                    </button>
+                  </div>
+
+              
+            </div>
+            <figure class="header__img--wrapper">
+                    <img
+              src="https://dev.d24jig8s1lr7n9.amplifyapp.com/img/building.681ea6bf.png"
+              alt="building"
+              class="header__img">
+              <img src="asset/download.webp" class="img1" id="movingImage" alt="Moving Car">
+
+                  </figure>
+       
+    </div>
+        </header>
+  </section>
+  <script src="script1.js"></script>
+</body>
+</html>

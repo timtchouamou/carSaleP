@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+/* let initialise everything*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+/* GENERAL SETTING */
+html {
+  scroll-behavior: smooth; /* To add scroll tool */
+}
+
+ul {
+  display: flex;
+}
+li {
+  list-style-type: none;
+  color: #000;
+}
+
+.purple {
+  color: #7342d6;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+padding: 24px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row__colum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ p {
+  line-height: 1.5;
+  
+ }
+
+.no-cursor {
+  cursor: none;
+}
+
+
+/*NAV*/
+
+
+#landing {
+  background-color: rgba(162, 92, 41, 0.1);
+ 
+
+}
+
+nav {
+  height: 80px;
+  display: flex;
+}
+
+.nav__container {
+   display: flex;
+   width: 100%;
+   max-width: 1200px;
+   padding: 0 24px;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+
+}
+
+ .nav__block-logo--title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   }
+
+.nav__logo {
+  width: 160px;
+  height: 80px;
+}
+
+.nav__logo--title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/*.nav__links {}*/
+
+.nav__link {
+  margin-left: 16px;
+  color: #151515;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: bold;
+}
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link--primary {
+  border: 2px solid #7342d6;
+  border-radius: 4px;
+
+}
+
+
+.nav__link--primary:hover {
+  text-decoration: none;
+}
+
+a.btn-contact {
+    display: flex
+;
+    cursor: pointer;
+    max-height: 48px;
+    min-height: 48px;
+    padding: 12px 40px;
+    align-items: center;
+    border: 2px #5d3eff;
+    border-radius: 50px;
+    background-color: #6030b1;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .35s ease;
+}
+
+/* THIS IS FOR THE BUGGER MENU */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+   color: #7342d6;
+   display: none; 
+}
+.menu__backdrop {
+  border: 2px solid red;
+  position: absolute; /* this to make position normal */
+  background-color: black;
+  top: 0;
+  left: 0;
+ width: 100vw;
+height: 100vh;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+display: none;
+/* for animation */
+transition: all 30ms ease;
+opacity: 0;
+visibility: hidden;
+
+}
+
+.menu--open .menu__backdrop{
+  display: flex;
+  /* for animation */
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu--open { /* thsi is to only see the menu open on the screen */
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__link {
+  color: white;
+  font-size: 40px;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+
+}
+
+
+/*HEADER*/
+
+/* DATE DISPLAY */
+.date-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.full-date,
+#currentDate {
+  color: rgb(175, 35, 35);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header {
+  height: calc(100vh - 80px);
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.header__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.header__img--wrapper {
+  padding: 20px;
+}
+
+
+h1 {
+  font-size: 56px;
+  color: #7342d6;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+   font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input__button{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.header__search--input {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #0a1f44;
+    color: #0a1f44;
+    display: inline-block;
+    height: 70px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+    font-size: 24px;
+    padding-left: 25px;
+}
+
+/* Button effect */
+
+.header__search--btn {
+  background-color: #7342d6;
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 12px 24px;
+  max-width: 200px;
+}
+
+.header__search--btn {
+  cursor: pointer;
+}
+.header__search--btn:active {
+  transform: translateY(1px);
+}
+
+/* lllllllllllllllllllllll */
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+}
+
+.loading-state {
+    margin: 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.svg-inline--fa.fa-w-16 {
+    width: 1em;
+}
+
+.fa-spinner
+
+  .fa-w-16
+
+/* lllllllllllllllllllllllllllll */
+
+
+
+.svg-inline--fa.fa-w-16 {
+    width: 1em;
+}
+
+.header__img--wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+.loading-state {
+    margin: 80px 0;
+    width: 100%;
+}
+
+@keyframes rotation-data {
+
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(1turn);
+}
+
+}
+
+.img1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 500px;
+            height: 200px;
+            color: #fff;
+        }
+
+
+/* IF WE DONT WANT TO SHOW THE MENU, ADD THE BREAK POINT */
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
+  .btn__menu {
+    display: block; /* only display it with max-width = 550px */
+  }
+  .highlight {
+    width: 100%;
+
+  }
+  .highlight:not(:last-child) {
+     margin-bottom: 24px;
+  }
+}
+
+
+
+/* Let make out webesite responsive */
+/* SMALL PHONE, TABLETS, LARGE SMARTPHONE */
+@media(max-width: 768px){
+  .header__description {
+    padding: 0 24px;
+  }
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 26px;
+}
+button {
+  font-size: 18px;
+}
+.book {
+  width: 50%;
+}
+
+}
+
+element.style {
+    display:none;
+}
